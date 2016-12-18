@@ -42,7 +42,7 @@ bot.dialog('/', function (session) {
             queueSvc.createMessage('bot-queue', queueMessageBuffer, function(err, result, response){
                 if(!err){
                     // Message inserted
-                    session.send('Your message (\'' + session.message.text + '\') has been added to a queue, and it will be sent back to you via a Function');
+                    session.send('Your msg (\'' + session.message.text + '\') has been added to a queue, and it will be sent back to you via a Function');
                 } else {
                     // this should be a log for the dev, not a message to the user
                     session.send('There was an error inserting your message into queue');
